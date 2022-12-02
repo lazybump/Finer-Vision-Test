@@ -1,15 +1,15 @@
 import { useState } from "react";
-import BodyOne from "./BodyOne";
+import SectionOne from "./SectionOne";
 
 const StepOne = () => {
-  const [clicked, setClicked] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="p-1" onClick={() => setClicked((prev) => !prev)}>
-      <div className="bg-[#ffb526] text-white p-4 rounded-lg cursor-pointer ">
+    <div className="p-1 relative" onClick={() => setIsOpen((prev) => !prev)}>
+      <header className="bg-[#ffb526] text-white p-4 rounded-lg cursor-pointer ">
         Step 1: Your details
-      </div>
-      <BodyOne clicked={clicked} />
+      </header>
+      <SectionOne isOpen={isOpen} />
     </div>
   );
 };

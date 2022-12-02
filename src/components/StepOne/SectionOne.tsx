@@ -1,10 +1,10 @@
-interface BodyOneProps {
-  clicked: boolean;
+interface SectionOneProps {
+  isOpen: boolean;
 }
 
-const BodyOne = ({ clicked }: BodyOneProps) => {
+const SectionOne = ({ isOpen }: SectionOneProps) => {
   return (
-    <div className="bg-slate-300 p-2 grid gap-x-4 gap-y-2 grid-cols-3 grid-rows-2">
+    <section className="bg-slate-300 p-2 grid gap-x-4 gap-y-2 grid-cols-3 grid-rows-2">
       <div className="flex flex-col font-semibold">
         <label htmlFor="first-name">First Name</label>
         <input
@@ -35,8 +35,8 @@ const BodyOne = ({ clicked }: BodyOneProps) => {
           Next &gt;
         </button>
       </div>
-    </div>
+    </section>
   );
 };
 
-export default BodyOne;
+export default SectionOne;
