@@ -1,16 +1,16 @@
 import { useState } from "react";
 import Header from "../Header";
-import SectionOne from "./SectionOne";
+import SectionTwo from "./SectionTwo";
 
-const StepOne = () => {
+const StepTwo = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
     <div className="p-1" onClick={() => setIsOpen((prev) => !prev)}>
-      <Header title="Step 1: Your details" />
-      <SectionOne isOpen={isOpen} />
+      <Header title="Step 2: More comments" />
+      <SectionTwo isOpen={isOpen} />
     </div>
   );
 };
 
-export default StepOne;
+export default StepTwo;

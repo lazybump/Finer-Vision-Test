@@ -1,4 +1,5 @@
 import StepOne from "./components/StepOne/StepOne";
+import StepTwo from "./components/StepTwo/StepTwo";
 
 function App() {
   return (
@@ -9,7 +10,7 @@ function App() {
         onSubmit={(e) => e.preventDefault()}
       >
         <StepOne />
-        <StepOne />
+        <StepTwo />
         <StepOne />
       </form>
     </div>
