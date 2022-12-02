@@ -1,4 +1,5 @@
 import StepOne from "./components/StepOne/StepOne";
+import StepThree from "./components/StepThree/StepThree";
 import StepTwo from "./components/StepTwo/StepTwo";
 
 function App() {
@@ -11,7 +12,7 @@ function App() {
       >
         <StepOne />
         <StepTwo />
-        <StepOne />
+        <StepThree />
       </form>
     </div>
   );
