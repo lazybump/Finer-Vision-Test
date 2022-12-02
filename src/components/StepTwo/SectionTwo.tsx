@@ -6,11 +6,33 @@ interface SectionTwoProps {
 
 const SectionTwo = ({ isOpen }: SectionTwoProps) => {
   const [day, setDay] = useState("");
+  const [month, setMonth] = useState("");
+  const [year, setYear] = useState("");
 
-  const handleChange = ({ target }: ChangeEvent<HTMLInputElement>) => {
+  const handleDayChange = ({
+    target: { value },
+  }: ChangeEvent<HTMLInputElement>) => {
     const pattern = /^[0-9]{0,2}$/;
-    if (pattern.test(target.value)) {
-      setDay(target.value);
+    if (pattern.test(value) && value <= "31") {
+      setDay(value);
+    }
+  };
+
+  const handleMonthChange = ({
+    target: { value },
+  }: ChangeEvent<HTMLInputElement>) => {
+    const pattern = /^[0-9]{0,2}$/;
+    if (pattern.test(value) && value <= "12") {
+      setMonth(value);
+    }
+  };
+
+  const handleYearChange = ({
+    target: { value },
+  }: ChangeEvent<HTMLInputElement>) => {
+    const pattern = /^[0-9]{0,2}$/;
+    if (pattern.test(value)) {
+      setYear(value);
     }
   };
 
@@ -30,26 +52,28 @@ const SectionTwo = ({ isOpen }: SectionTwoProps) => {
         </select>
       </div>
       <div className="flex flex-col font-semibold row-start-2">
-        <label htmlFor="dob">Date of birth</label>
+        <label htmlFor="day">Date of birth</label>
         <div>
           <input
-            id="dob"
+            id="day"
             type="text"
-            onChange={handleChange}
-            className="data-input w-[40px] mr-2"
+            className="data-input w-[45px] mr-2 text-center"
+            onChange={handleDayChange}
             value={day}
             required
           />
           <input
-            id="dob"
             type="text"
-            className="data-input w-[40px] mr-2"
+            className="data-input w-[45px] mr-2 text-center"
+            onChange={handleMonthChange}
+            value={month}
             required
           />
           <input
-            id="dob"
             type="text"
-            className="data-input w-[40px]"
+            className="data-input w-[45px] text-center"
+            onChange={handleYearChange}
+            value={year}
             required
           />
         </div>
