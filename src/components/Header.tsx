@@ -1,8 +1,4 @@
-interface HeaderProps {
-  title: string;
-  id: number;
-  toggle: (i: number) => void;
-}
+import { HeaderProps } from "../Types";
 
 const Header = ({ title, id, toggle }: HeaderProps) => {
   return (

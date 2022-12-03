@@ -1,13 +1,9 @@
 import { useState } from "react";
+import { StepProps } from "../../Types";
 import Header from "../Header";
 import SectionOne from "./SectionOne";
 
-interface Props {
-  toggle: (i: number) => void;
-  selected: null | number;
-}
-
-const StepOne = ({ toggle, selected }: Props) => {
+const StepOne = ({ toggle, selected }: StepProps) => {
   return (
     <div className="p-1">
       <Header title="Step 1: Your details" key={1} id={1} toggle={toggle} />

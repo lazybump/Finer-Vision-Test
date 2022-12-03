@@ -1,6 +1,12 @@
-const SectionOne = () => {
+import { SectionProps } from "../../Types";
+
+const SectionThree = ({ id, selected }: SectionProps) => {
   return (
-    <section className="bg-slate-300 p-2 grid grid-cols-5 gap-x-4 gap-y-2 ">
+    <section
+      className={`bg-slate-300 p-2 grid grid-cols-5 gap-x-4 gap-y-2 ${
+        selected === id ? "" : "hidden"
+      }`}
+    >
       <div className="flex flex-col font-semibold col-span-3">
         <label htmlFor="comments">Comments</label>
         <textarea
@@ -18,4 +24,4 @@ const SectionOne = () => {
   );
 };
 
-export default SectionOne;
+export default SectionThree;

@@ -1,14 +1,12 @@
-import { useState } from "react";
 import Header from "../Header";
 import SectionTwo from "./SectionTwo";
+import { StepProps } from "../../Types";
 
-const StepTwo = () => {
-  const [isOpen, setIsOpen] = useState(false);
-
+const StepTwo = ({ toggle, selected }: StepProps) => {
   return (
-    <div className="p-1" onClick={() => setIsOpen((prev) => !prev)}>
-      <Header title="Step 2: More comments" key={2} />
-      <SectionTwo isOpen={isOpen} />
+    <div className="p-1">
+      <Header title="Step 2: More comments" key={2} id={2} toggle={toggle} />
+      <SectionTwo id={2} selected={selected} />
     </div>
   );
 };

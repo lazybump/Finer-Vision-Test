@@ -22,8 +22,8 @@ function App() {
         onSubmit={(e) => e.preventDefault()}
       >
         <StepOne toggle={toggle} selected={selected} />
-        <StepTwo />
-        <StepThree />
+        <StepTwo toggle={toggle} selected={selected} />
+        <StepThree toggle={toggle} selected={selected} />
       </form>
     </div>
   );

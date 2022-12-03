@@ -1,6 +1,7 @@
 import { ChangeEvent, useState } from "react";
+import { SectionProps } from "../../Types";
 
-const SectionTwo = () => {
+const SectionTwo = ({ id, selected }: SectionProps) => {
   const [day, setDay] = useState("");
   const [month, setMonth] = useState("");
   const [year, setYear] = useState("");
@@ -33,7 +34,11 @@ const SectionTwo = () => {
   };
 
   return (
-    <section className="bg-slate-300 p-2 grid gap-x-4 gap-y-2 grid-cols-3 grid-rows-2">
+    <section
+      className={`bg-slate-300 p-2 grid gap-x-4 gap-y-2 grid-cols-3 grid-rows-2 ${
+        selected === id ? "" : "hidden"
+      }`}
+    >
       <div className="flex flex-col font-semibold">
         <label htmlFor="first-name">Telephone number</label>
         <input id="first-name" type="text" className="data-input" />
