@@ -7,7 +7,7 @@ const StepTwo = () => {
 
   return (
     <div className="p-1" onClick={() => setIsOpen((prev) => !prev)}>
-      <Header title="Step 2: More comments" />
+      <Header title="Step 2: More comments" key={2} />
       <SectionTwo isOpen={isOpen} />
     </div>
   );

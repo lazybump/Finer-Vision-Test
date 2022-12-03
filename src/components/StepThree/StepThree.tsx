@@ -7,7 +7,7 @@ const StepThree = () => {
 
   return (
     <div className="p-1" onClick={() => setIsOpen((prev) => !prev)}>
-      <Header title="Step 3: Final comments" />
+      <Header title="Step 3: Final comments" key={3} />
       <SectionThree isOpen={isOpen} />
     </div>
   );

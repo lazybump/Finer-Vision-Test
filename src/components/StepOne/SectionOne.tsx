@@ -1,10 +1,15 @@
-interface SectionOneProps {
-  isOpen: boolean;
+interface Props {
+  id: number;
+  selected: null | number;
 }
 
-const SectionOne = ({ isOpen }: SectionOneProps) => {
+const SectionOne = ({ id, selected }: Props) => {
   return (
-    <section className="bg-slate-300 p-2 grid gap-x-4 gap-y-2 grid-cols-3 grid-rows-2">
+    <section
+      className={`bg-slate-300 p-2 grid gap-x-4 gap-y-2 grid-cols-3 grid-rows-2 ${
+        selected === id ? "hidden" : ""
+      }`}
+    >
       <div className="flex flex-col font-semibold">
         <label htmlFor="first-name">First Name</label>
         <input id="first-name" type="text" className="data-input" />

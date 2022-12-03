@@ -2,13 +2,16 @@ import { useState } from "react";
 import Header from "../Header";
 import SectionOne from "./SectionOne";
 
-const StepOne = () => {
-  const [isOpen, setIsOpen] = useState(false);
+interface Props {
+  toggle: (i: number) => void;
+  selected: null | number;
+}
 
+const StepOne = ({ toggle, selected }: Props) => {
   return (
-    <div className="p-1" onClick={() => setIsOpen((prev) => !prev)}>
-      <Header title="Step 1: Your details" />
-      <SectionOne isOpen={isOpen} />
+    <div className="p-1">
+      <Header title="Step 1: Your details" key={1} id={1} toggle={toggle} />
+      <SectionOne id={1} selected={selected} />
     </div>
   );
 };

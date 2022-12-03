@@ -1,10 +1,6 @@
 import { ChangeEvent, useState } from "react";
 
-interface SectionTwoProps {
-  isOpen: boolean;
-}
-
-const SectionTwo = ({ isOpen }: SectionTwoProps) => {
+const SectionTwo = () => {
   const [day, setDay] = useState("");
   const [month, setMonth] = useState("");
   const [year, setYear] = useState("");
