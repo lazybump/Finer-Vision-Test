@@ -4,7 +4,7 @@ import StepThree from "./components/StepThree/StepThree";
 import StepTwo from "./components/StepTwo/StepTwo";
 
 function App() {
-  const [selected, setSelected] = useState<number | null>(null);
+  const [selected, setSelected] = useState<number | null>(1);
 
   const toggle = (i: number) => {
     if (selected === i) {
