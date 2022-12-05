@@ -41,12 +41,12 @@ const SectionTwo = ({ id, selected }: SectionProps) => {
     >
       <div className="flex flex-col font-semibold">
         <label htmlFor="first-name">Telephone number</label>
-        <input id="first-name" type="text" className="data-input" />
+        <input id="first-name" type="tel" className="data-input" required />
       </div>
 
       <div className="flex flex-col font-semibold">
         <label htmlFor="surname">Gender</label>
-        <select disabled className="data-input">
+        <select className="data-input" required>
           <option value="male">Select Gender</option>
           <option value="male">Male</option>
           <option value="female">Female</option>
